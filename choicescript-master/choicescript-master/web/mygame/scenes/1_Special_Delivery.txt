@@ -1,0 +1,18 @@
+Your bones are aching. It's been centuries since you've been in the field, and you're not sure you're up to any more of this tonight. 
+
+You hear a low growl as you enter the living room. You spy a thick-jowled, heavyset dog in the corner, tied to the recliner. She's on a long leash. And she looks mad.
+
+*fake_choice
+	#What a cute little girl! I conjure up a gingerbread dog treat for her.
+		*set Grumpy_Goose %-10
+		*set Cheer %+10
+
+	#What's that lump in my coat? Scrap metal and batteries? A robot spider might keep the beast away. 
+		*set Grumpy_Goose %+10
+		*set Tinkering %+10
+
+	#In my youth, I ran in the great hunt with Odin and his pack. I slip into my old wolf form long enough to cross to the stairs.
+		*set Shifting %+10
+		*set Trickery %+10
+
+*finish

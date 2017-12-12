@@ -1,0 +1,16 @@
+This is a stats screen!
+
+*stat_chart
+	opposed_pair Grumpy_Goose
+		Happy_Helper
+	opposed_pair Steadfast
+		Open_Minded
+	opposed pair Gluttonous
+		Temperate
+	percent Shifting
+	percent Tinkering
+	percent Trickery
+	percent Cheer
+	percent Connections
+	text Christmas_Spirit
+	text Elf_Rank

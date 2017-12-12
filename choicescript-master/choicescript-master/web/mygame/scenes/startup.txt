@@ -1,0 +1,61 @@
+*comment Copyright 2010 by Dan Fabulich.
+*comment 
+*comment Dan Fabulich licenses this file to you under the
+*comment ChoiceScript License, Version 1.0 (the "License"); you may
+*comment not use this file except in compliance with the License. 
+*comment You may obtain a copy of the License at
+*comment 
+*comment  http://www.choiceofgames.com/LICENSE-1.0.txt
+*comment 
+*comment See the License for the specific language governing
+*comment permissions and limitations under the License.
+*comment 
+*comment Unless required by applicable law or agreed to in writing,
+*comment software distributed under the License is distributed on an
+*comment "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+*comment either express or implied.
+
+*title In the Service of Mrs. Claus
+*author Brian Rushton
+*scene_list
+  startup
+  1_Special_Delivery
+  2_Castle_Intruder
+  variables
+  gosub
+  ending
+  death
+
+  
+*comment Primary stats
+
+*create Grumpy_Goose 50
+*create Steadfast 50
+*create Gluttonous 50
+*create Shifting 0
+*create Tinkering 0
+*create Trickery 0
+*create Cheer 0
+*create Connections 0
+
+*comment Secondary Stats
+*create Christmas_Spirit 0
+*create Elf_Rank 10
+*create Kolya 0
+*create Carl_Alan 0
+*create Kolya_Naughty 50
+*create Carl_Alan_Naughty 50
+*create Claus_Strength 50
+*create Bleed 50
+*create ArmySize 0
+*create KingdomSize 0
+*create Net_Worth 0
+*create Hercules 0
+*create Quartz 0
+*create Flame 0
+*create DreamsProgress 0
+*create FlamesProgress 0
+*create KrinkleProgress 0
+
+Hello!
+*finish
