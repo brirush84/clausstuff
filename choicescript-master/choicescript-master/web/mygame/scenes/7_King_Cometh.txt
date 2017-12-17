@@ -1,0 +1,46 @@
+You feel a rush of thoughts and feelings flood into you.
+
+Fear. An image of Mrs. Claus. Anger. Candid Mistletoe. The earth, from space. Confusion.
+
+It's suffocating.
+
+*set Kingdom_Progress +1
+*fake_choice
+	*if Kingdom_Progress >5
+		#I know this creature. I've heard his voice. It's time he hears mine. 
+			*set Bleed %-10
+			*set King %+10
+	#I can't handle this alone! I order a squad of elves as backup. Together we can placate the Nightmare King. (tests Elf Rank)
+		*if Elf_Rank >=15
+			You calm down the Nightmare King, who is friendly to you, as are the elves. Mrs. Claus is pleased.
+			*set Bleed %-10
+			*set Connections %+10
+			*set King %+10
+			*set Claus %+10
+		*if Elf_Rank <15
+			The Nightmare King is agitated and rampages, disturbing the area.
+			*set Bleed +2
+			*set King %-10
+			*set Carl_Alan %-10
+	#I can't handle the bleed between the worlds...but maybe Carl Alan can. I call for him to help me talk to the King.
+		*if Carl_Alan >= 65
+			Carl Alan enters the King with you, and acts as interpreter (but seems possessed, like the Exorcist, keeping with the faux-horror-movie theme). It pulls the worlds together more.
+			*set King %-10
+			*set Bleed +1
+		*if Carl_Alan <65
+			Carl Alan is too scared to come in. The Nightmare King senses his fear and withdraws.
+			*set Bleed -1
+			*set King %-10
+			*set Carl_Alan %-10
+	#I can't do this alone. Mrs. Claus is weaker than ever, but she's the only one who can talk this beast down.
+		*if Claus_Strength >=60
+			Mrs. Claus answers your call, and you help the Nightmare King together. It takes a lot out of her, though. 
+			*set Claus_Strength %-10
+			*set Claus %+10
+			*set Bleed -1
+		*if Claus_Strength <60
+			Mrs. Claus tries to help, but ends up horribly weakened, and the Nightmare King is dismayed, its echos rippling through the Earth and diminishing Christmas Spirit.
+			*set Claus_Strength %-30
+			*set King %-10
+			*set Christmas_Spirit %-10
+*finish

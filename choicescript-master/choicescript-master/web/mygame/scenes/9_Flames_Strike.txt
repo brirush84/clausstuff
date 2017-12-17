@@ -1,0 +1,51 @@
+Panic erupts as Mrs. Claus springs her trap. An ogre smashes into you and sends you flying.
+
+You crash into a table and roll off to the ground, tangled in a tablecloth. Strong hands grab your shoulders and pull you out; you find yourself face to face with a gargoyle. You recognize her; she's part of Flickering Flame's crew.
+
+She hisses at you and digs her claws into your back.
+
+*fake_choice
+	#I shrink, becoming a tiny mouse, and scurry away.
+		*if Shifting >=60
+			*goto GargoyleStrongSuccess
+		*elseif Shifting >40
+			*goto GargoyleWeakSuccess
+		*else
+			*goto GargoyleFailure
+	#I'm surrounded by wood chips, cutlery, and a tablecloth. My hands are free. I've got this. (hard Tinker test)
+		*if Tinkering >=75
+			*goto GargoyleStrongSuccess
+		*elseif Tinkering >50
+			*goto GargoyleWeakSuccess
+		*else
+			*goto GargoyleFailure
+	#Only a Christmas miracle could help me now! Fortunately, I'm an expert in Christmas miracles. (hard Cheer test)
+		*if Cheer >=75
+			*goto GargoyleStrongSuccess
+		*elseif Cheer >50
+			*goto GargoyleWeakSuccess
+		*else
+			*goto GargoyleFailure
+	#Nutmeg and mistletoe, this is crazy!  These people were my friends! Someone has to recognize me! (medium connections test)
+		*if Connections >=60
+			*goto GargoyleStrongSuccess
+		*elseif Connections >40
+			*goto GargoyleWeakSuccess
+		*else
+			*goto GargoyleFailure
+	
+*label GargoyleStrongSuccess
+In all cases, a strong success allows you to help Mrs. Claus fight off her assailants, keeping her health high and earning the admiration of the other elves.
+*set Claus_Strength +1
+*set Elf_Rank +1
+
+*label GargoyleWeakSuccess
+A medium success leads to Mrs. Claus being only mildly injured
+*set Claus_Strength -1
+
+*label GargoyleFailure
+A failure leads to her being severely injured (--Claus strength) and other elves picking up the slack and taking charge	
+*set Elf_Rank -1
+*set Claus_Strength -2
+
+*finish

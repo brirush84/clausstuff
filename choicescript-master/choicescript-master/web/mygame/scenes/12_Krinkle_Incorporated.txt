@@ -1,0 +1,26 @@
+The war is settled, and both worlds (or what's left of them) are recovering. But energy is draining from all magical creatures, and soon you find out why. The Krinkle Incorporated starts buying out store after store, and hosting public events about a new holiday, using Santa's power. Money starts flowing to the Krinkle Incorporated, and the unseen world starts fading. 
+
+Copper Crank, ready for dissolution, fades first (unless you have a strong relationship). Others start fading away (including Cai, who loses loses copies of themself). You rally your friends and lead an assault on the Krinkle Incorporated.
+
+Philoctetes is extremely defensive when you find him but unwilling to do anything. You must convince them to stop. No matter what, it's just too much, mentally and physically, and Christmas is burning out. You have to rekindle Christmas.
+
+Objective testing choice:
+
+You discover that you still hold Santa's stone clenched in your fist.
+
+Its glow is much weaker than you remember. You have to restore it, or this will be the last Christmas.
+
+*fake_choice
+	#The future of all Christmases rides on this; one bad Christmas this year won't matter. I use the Christmas Spirit of the world to refill the stone. (requires high Christmas spirit)
+
+	#The elves are exhausted and drained, but they trust me. I ask for their warmth and strength to fill the stone, regardless of the cost. (requires high Elf rank)
+
+	#I've never met a child with as good a heart as $child. Our friendship can rekindle the stone, but I'm not sure what it will do to us. (requires high $child relationship, $child with high Niceness)
+
+	#If two rotten old souls like me and $child can find friendship, then surely we can find a way to rekindle the stone. (requires high $child relationship, high Grumpy Gus, and high $child Naughtiness)(changes Grumpy Gus to happy helper and naughtiness to niceness)
+
+	#I let it die out. Christmas has had a good run, but it's time for it to end. (unavailable with high Happy Helper)
+
+	#I let it die out. There's nothing else I can do.
+
+*finish

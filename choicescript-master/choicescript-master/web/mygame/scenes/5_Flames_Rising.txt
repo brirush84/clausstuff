@@ -1,0 +1,41 @@
+'I'm sorry, $players_name, but this ride stops here,' says Dancer. You both slow to a stop.
+
+'Here? But I don't see anything. Maybe when we land--' you start to say.
+
+She cuts you off. 'We aren't going to land. Not together, at least.'
+
+'Dancer, wait!' you say, but it's too late. Dancer bucks you off in midair! You only have a few moments before you hit the ground; how do you save yourself?
+
+*fake_choice
+	#I transform into a bird. I better get the wings right this time!
+		*if Shifting >=60
+			*goto FallingSuccess
+		*else
+			*goto FallingFailure
+	#There have to be some wind sprites around here; if you could just remember that scrap of Anemosian you picked up last year.
+		*if Connections >=50
+			*goto FallingSuccess
+		*else
+			*goto FallingFailure
+	#You whip up an improvised parachute out of your backpack, some chewing gum, and an old roll of tinsel.
+		*if Tinkering >=60
+			*goto FallingSuccess
+		*else
+			*goto FallingFailure
+	#You make a desperate Christmas wish for a giant marshmallow and landing pool of hot chocolate.
+		*if Cheer >=50
+			*goto FallingSuccess
+		*else
+			*goto FallingFailure
+
+
+*label FallingSuccess
+You surprise Flickering Flame's crew, overhearing some interesting information. When you finally run into him, he's impressed. 
+*set Flames_Progress +2
+*set Flame %+10
+*finish
+		
+*label FallingFailure 
+Flickering Flame catches you at the last moment, as part of an intimidation technique. You catch a glimpse of his plans and preparations.
+*set Flames_Progress +1
+*finish

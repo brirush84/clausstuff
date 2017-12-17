@@ -1,3 +1,96 @@
+Waiting outside
+
+Mrs. Claus. Your fondest memory of her is when she was
+
+#Egypt
+#Athens
+#Norse
+#Early Christmas
+#Fashion NYC christmas
+
+Remembering Ceremony. What is your name?
+
+*fake_choice 
+	#Elegant adjective
+		*set Elegant %+20
+	#Rustic adjective
+		*set Elegant %-20
+	#Cheerful
+		*set first_name "Cheerful"
+		*set Grumpy_Goose %-20
+	#Sour
+		*set first_name "Sour"
+		*set Grumpy_Goose %+20
+	#Trueheart
+		*set first_name "Trueheart"
+		*set Steadfast %+20
+	#Curious
+		*set first_name "Curious"
+		*set Steadfast %-20
+	#You choose
+		*input_text first_name
+		
+and the second half is
+
+*fake_choice
+	#Snowflake
+		*set second_name "Snowflake"
+		*set Cheer %+10
+	#Tinkering noun
+		*set Tinkering %+10
+	#Changeling
+		*set second_name "Changeling"
+		*set Shifting %+10
+	#Shadow
+		*set second_name "Shadow"
+		*set Trickery %+10
+	#Friend
+		*set Connections %+10
+		*set second_name "Friend"
+	#You choose
+		*input_text first_name
+
+Right. Your name is ${first_name} ${second_name}.
+
+You appear in your usual form. It's changed a bit over the centuries, but you've figured out what you like best:
+
+*fake_choice
+	# I am a wisp of fog, subtle and quick.
+		*set Trickery %+10
+		*set Elegant %+10
+	# I am a jolly old elf with red cheeks and a bright nose.
+		*set Cheer %+10 
+		*set Grumpy_Goose %-10
+	# I am a lurking goblin wearing soot-stained rags.
+		*set Trickery %+10
+		*set Grumpy_Goose %+10
+	# I am slender fairy with a fondant dress, sugarspun wings and sugarplum slippers.
+		*set Cheer +%10
+		*set Glutton %+10
+		*set Elegant %+10
+	# I am a regal figure, with a holly crown and a white mantle. I command respect.
+		*set Connections %+10
+		*set Elegant %+10
+	# I am a wizened hermit with an apron full of tools, springs and wires.
+		*set Tinkering %+10
+	# I am an eery, ghostly child.
+		*set Grumpy_Goose %+10
+		*set Trickery %+10
+	# Actually, I don't like to settle down. That's what all the fun is!
+		*set Shifting %+10
+
+This isn't like your kitchen. It's more
+
+*fake_choice
+	#Gluttonous choice
+	#Elegant choice
+	#Rustic choice
+	#Temperate choice
+	
+Mrs. Claus taught you how to avoid .... She could be here, but...
+	
+
+	
 Your bones are aching. It's been centuries since you've been in the field, and you're not sure you're up to any more of this tonight. 
 
 You hear a low growl as you enter the living room. You spy a thick-jowled, heavyset dog in the corner, tied to the recliner. She's on a long leash. And she looks mad.
@@ -13,6 +106,9 @@ You hear a low growl as you enter the living room. You spy a thick-jowled, heavy
 
 	#In my youth, I ran in the great hunt with Odin and his pack. I slip into my old wolf form long enough to cross to the stairs.
 		*set Shifting %+10
-		*set Trickery %+10
 
+You smile. 
+		
+There's just one problem: where is the tree? You were expecting it to be here. Kolya must have hidden it.
+		
 *finish

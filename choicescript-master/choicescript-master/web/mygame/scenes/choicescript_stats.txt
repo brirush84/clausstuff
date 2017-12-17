@@ -5,8 +5,10 @@ This is a stats screen!
 		Happy_Helper
 	opposed_pair Steadfast
 		Open_Minded
-	opposed pair Gluttonous
+	opposed_pair Gluttonous
 		Temperate
+	opposed_pair Elegant
+		Rustic
 	percent Shifting
 	percent Tinkering
 	percent Trickery

@@ -8,25 +8,25 @@ Your foot hits something metal that skitters across the floor. You pick it up. I
 	#I fit the leftover pieces together. There should be enough here to identify the manufacturer.
 		*if Tinkering >= 25
 			You learn about the Krinkle Incorporated's involvement.
-				*set Elf_Rank +1;
-				*set KrinkleProgress +1;
+			*set Elf_Rank +1
+			*set Krinkle_Progress +1
 		*if Tinkering < 25
 			You are impressed by the technical capability of the unknown manufacturer.
 	#I have a friend of mine, a poltergeist who haunts police departments. They might be able to help. If I could just remember their name.
 		*if Connections >= 35
 			The poltergeist appears, and identifies the Krinkle Incorporated. You learn about the Krinkle Incorporateds involvement.
-				*set Elf_Rank +1;
-				*set KrinkleProgress +1; 
+			*set Elf_Rank +1
+			*set Krinkle_Progress +1
 		*if Connections < 35
-			Failure: You summon the wrong poltergeist; unfortunately, it's Tina, from accounting. Now she's grouchier. 
-				*set Christmas_Spirit -1;
+			You summon the wrong poltergeist; unfortunately, it's Tina, from accounting. Now she's grouchier. 
+			*set Christmas_Spirit -1
 	#Whoever broke into Santa's tomb might still be around. I hide and wait for them to reveal themselves.
-		* if Trickery >= 35
+		*if Trickery >= 35
 			You see a glimpse of the nightmare king, not knowing what it is. 
-				*set Elf_Rank +1;
-				*set Kingdom_Progress +1;
+			*set Elf_Rank +1
+			*set Krinkle_Progress +1
 		*if Trickery < 35
-			Failure: You sense a dangerous, unsettling presence, but don't know what it is. You feel chilled.
-				*set Christmas Spirit -1;
+			You sense a dangerous, unsettling presence, but don't know what it is. You feel chilled.
+			*set Christmas_Spirit -1
 				
 *finish

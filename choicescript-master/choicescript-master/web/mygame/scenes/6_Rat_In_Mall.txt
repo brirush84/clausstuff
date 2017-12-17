@@ -1,0 +1,43 @@
+You skate along the slippery floor on the upper level of the the mall, keeping pace with Glass Ghost down below. They hop from kiosk to kiosk. A small blur of motion is all you can see, and you know the humans can't see a thing.
+
+Your heart is jingling in your chest as you push yourself to follow. Suddenly, you realize exactly where they're headed: Stefani's Jewelers. Gemstones have a strong connection to both worlds, and the mingled greed, love, and hope of humans pulls them even closer. There must be a rip in the worlds back there.
+
+You hear a crash and it tears your attention back to the chase. Glass Ghost has just been side-swiped by a rogue toddler on a motorized scooter shaped like a zebra!
+
+You make it to Stefani's with just seconds to come up with a plan.
+
+*fake_choice
+	#Glass Ghost isn't the only master of disguise here. I blend into a display case and wait for them.
+		*if Trickery >=70
+			*goto StefaniSuccess
+		*if Trickery <70
+			*goto StefaniFailure
+	*if Elegant < 60
+		#I can send a clean-up crew later. I smash the cases and make an optical trap from the glass and diamonds.
+			*if Tinkering >=50
+				*goto StefaniSuccess
+			*if Tinkering <50
+				*goto StefaniFailure
+	*if Elegant > 40
+		#It's diamonds this Christmas, baby! I light up the place by summoning a thousand strings of Christmas lights.
+			*if Cheer >=50
+				*goto StefaniSuccess
+			*if Cheer <50
+				*goto StefaniFailure
+	#I can't believe that Glass Ghost doesn't feel one shred of remorse. I'm going to talk to them. Maybe they'll hear me out.
+		*if Glass >=50
+			*goto StefaniSuccess
+		*if Glass <50
+			*goto StefaniFailure
+
+*label StefaniSuccess
+You catch Glass Ghost yourself (+Elf Rank) and have a chance to grill them on your own, learning about all the potential buyers (+progress in each of the 3 main storylines).
+*set Elf_Rank +1
+*set Kingdom_Progress +1
+*set Flames_Progress +1
+*set Krinkle_Progress +1
+*finish
+
+*label StefaniFailure
+Cai, one of whose copies works at Stefani's, catches Glass Ghost for you. Cai doesn't want any trouble, so you only get to ask a few questions (+progress in one or two storylines, based on your questions). This storylet lets you build or lose relationship with Cai.
+*finish

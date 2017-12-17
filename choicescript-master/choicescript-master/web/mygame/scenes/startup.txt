@@ -21,10 +21,17 @@
   startup
   1_Special_Delivery
   2_Castle_Intruder
-  variables
-  gosub
-  ending
-  death
+  3_Enter_Kingdom
+  4_Bad_Toy
+  5_Flames_Rising
+  6_Rat_In_Mall
+  7_King_Cometh
+  8_Enter_The_Beast
+  9_Flames_Strike
+  10_The_Last_Christmas
+  11_Silent_Night
+  12_Krinkle_Incorporated
+  13_Epilogue
 
   
 *comment Primary stats
@@ -32,6 +39,7 @@
 *create Grumpy_Goose 50
 *create Steadfast 50
 *create Gluttonous 50
+*create Elegant 50
 *create Shifting 0
 *create Tinkering 0
 *create Trickery 0
@@ -47,15 +55,22 @@
 *create Carl_Alan_Naughty 50
 *create Claus_Strength 50
 *create Bleed 50
+*create Claus 50
 *create ArmySize 0
 *create KingdomSize 0
 *create Net_Worth 0
 *create Hercules 0
 *create Quartz 0
+*create King 0
 *create Flame 0
-*create DreamsProgress 0
-*create FlamesProgress 0
-*create KrinkleProgress 0
+*create Glass 0
+*create Kingdom_Progress 0
+*create Flames_Progress 0
+*create Krinkle_Progress 0
+*create Copper 0
+
+*create first_name "Happy"
+*create second_name "Helper"
 
 Hello!
 *finish

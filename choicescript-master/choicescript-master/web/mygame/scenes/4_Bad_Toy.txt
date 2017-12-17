@@ -1,0 +1,58 @@
+Copper Crank continues to examine the toy, turning it and examining it. This is taking her quite a bit longer than you thought it would.
+
+The mounds of junk behind the tinker shift. She pays no notice.
+
+The mounds shift again, and two figures emerge, shaking off old tin cans and busted TV monitors. They shuffle towards you, and you see that they are child-sized crab-like robots.
+
+“Excuse me,” you say.
+
+She ignores you.
+
+“Excuse me!”
+
+She answers without looking. “Those are old creations. Rough drafts for mechanical soldiers. Pay them no mind. They should be no problem for an honored servant of Mrs. Claus.” She chuckles.
+
+The creatures have been steadily advancing. Now they split up, trying to surround you.
+
+*fake_choice
+	#I examine them for weak points.
+		*if Tinkering >= 50
+			Both robots are defeated. Copper Crank finishes examination
+			*set Krinkle_Progress +2
+		*if Tinkering <50
+			*if Tinkering >=30
+				One robot is defeated. Copper Crank stops the other one. Partially finishes examination.
+				*set Krinkle_Progress +1
+			*if Tinkering <30
+				Copper Crank stops the two robots, but the toy is gone afterwards. She gets mad and opens up. Short branch to + or -Copper Crank Relationship
+	#I reprogram one to attack the other. It'll be dicy, though.
+		*if Tinkering >= 60
+			Copper Crank finishes examination and is impressed.
+			*set Krinkle_Progress +2
+			*set Copper %+10
+		*if Tinkering <60
+			*if Tinkering >=50
+				Copper Crank rescues you, loses toy, as above; +/- Copper Crank relationships
+			*if Tinkering <50
+				You make them more aggressive. Copper Crank stops them only with difficulty. She criticizes you and Claus. 	
+				*set Copper -1
+	#I appeal to Copper Crank's sense of Christmas goodness.
+		*if Cheer >= 60
+			Copper Crank is tinkled pink; helps with bots; toy is stolen.
+			*set Grumpy_Goose %-20
+			*set Copper %+20
+		*if Cheer <60
+			Copper Crank is annoyed, stops bots; toy is stolen.
+			*set Copper %-20
+	#I disappear, camouflaging myself among the junk.
+		*if Trickery >= 60
+			The bots go inactive, Copper Crank finishes, and you see a corporate spy watching.
+			*set Krinkle_Progress +2
+		*if Trickery <60
+			*if Trickery >=50
+				You have to shift spots a few times, but you hide from the bots. Copper Crank tells you about the Krinkle Incorporated.
+				*set Krinkle_Progress +1
+			*if Trickery <50
+				The bots grab you; Copper Crank helps you; short branch to Copper Crank +/- relationship
+
+*finish

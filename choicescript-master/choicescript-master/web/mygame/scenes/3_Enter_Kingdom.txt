@@ -2,4 +2,38 @@ The crowd breaks into applause, and Fractured Quartz slips behind the curtain. T
 
 Candid Mistletoe whispers, “I have to go. I'll explain later.” She runs off, and you're left to your own devices. 
 
-You look over the crowd. It's time to get more information, but who do you talk to ?
+You look over the crowd. It's time to get more information, but who do you talk to?
+
+*fake_choice
+	#A group of faeries dressed in spider silk, sipping dew from acorn cups.
+		*if Elegant >=50 
+			The faeries tolerate your presence. Though they don't speak to you directly, their conversation reveals a great deal about the Nightmare King and Fractured Quartz. 
+			*set Kingdom_Progress +1
+			*set Connections %+10
+		*if (Elegant < 50) and (Elegant >=30)
+			The faeries let you eat with them, but are sullen and silent. They only begin talking again as you leave, but you hear something of interest just as you go.
+			*set Kingdom_Progress +1
+		*if Elegant <30
+			The faeries are directly offended, splashing your face with their drinks. You don't learn more about the Kingdom, but some nearby trolls are impressed, leading to a small scene.
+	#A rowdy bunch of trolls fighting over a mountain of spiced ham.
+		*if Gluttonous >=40
+			After stuffing yourself, you discover you've won an eating contest. You learn quite a bit from the trolls, and make some friends to boot. 
+			*set Kingdom_Progress +1
+			*set Connections %+10
+		*if (Gluttonous <40) and (Gluttonous >=30)
+			You manage to snatch some ham, but you get lost in the shuffle. As everyone recovers from their feast, you overhear some unexpected information.
+			*set Kingdom_Progress +1
+		*if Gluttonous <30
+			You get thrown far from the group, and miss out on any opportunities to gather information.
+	#A sour-faced old spirit glowering at every happy couple that passes by. 
+		*if Grumpy_Goose >=50
+			The spirit takes to you instantly, complaining about modern trends and revealing that their significant other disappeared after being invited to a ceremony involving the Nightmare King. 
+			*set Kingdom_Progress +1
+			*set Connections %+10			
+		*if (Grumpy_Goose <50) and (Grumpy_Goose >=30) 
+			The spirit is standoffish, but complains enough about the way Fractured Quartz runs things for you to gather a substantial amount of information. (+KoD progress)
+			*set Kingdom_Progress +1
+		*if Grumpy_Goose <30
+			The spirit is offended, and abandons you. 
+
+*finish

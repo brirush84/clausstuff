@@ -1,0 +1,44 @@
+Your bones are aching. It's been centuries since you've been pushed this hard, and you're not sure how much more Mrs. Claus can take.
+
+You hear a trio of low growls as you enter the living room. You spy a thick-jowled, heavyset beast in the corner, chained to a bracket on the floor. She has three dog-like heads. And she looks mad.
+
+Mrs. Claus whispers, saying 'I can distract one or two of the heads. If you can take care of the others, we can get past.'
+
+*fake_choice
+	#No beast is truly naughty, even this red-eyed monstrosity. I conjure a massive pile of doggy treats.
+		*set Grumpy_Goose %-10
+		*if Cheer >=75
+			*goto Cerberus_Success
+		*elseif Cheer >=50
+			*goto Cerberus_Mixed_Success
+		*else 
+			*goto Cerberus_Failure
+	#The pile of debris in the kitchen is right behind me. I build a horde of spiders to distract the creature.
+		*set Grumpy_Goose %+10
+		*if Tinkering >=60
+			*goto Cerberus_Success
+		*elseif Tinkering >=40
+			*goto Cerberus_Mixed_Success
+		*else 
+			*goto Cerberus_Failure
+	#This type of being is known for its protectiveness. I could take the shape of a 3-headed pup and try to distract it.
+		*if Shifting >=75
+			*goto Cerberus_Success
+		*elseif Shifting >=50
+			*goto Cerberus_Mixed_Success
+		*else 
+			*goto Cerberus_Failure
+
+*label Cerberus_Success
+You distract 2 heads, get through safely.
+*set Claus %+10
+
+*label Cerberus_Mixed_Success
+You distract 1 head, barely making it through.
+*set Claus_Strength %-10
+
+*label Cerberus_Failure
+Claus has to take care of all 3.
+*set Claus %-10 
+*set Claus_Strength %-20
+*finish

@@ -1,0 +1,20 @@
+Messengers begin flying in from every corner of the unseen world: hags on splintered broomsticks, pixies with feet dipped in blood, and rolling rock trolls with missing limbs. All of them have the same report: Flickering Flame is on the move, with an army of thousands.
+
+As the messengers find out one by one that Mrs. Claus is gone, they fall to pieces. Some sit weeping on the ground, and others pound their fists in anger.
+
+A wispy ghost-boy wearing a nightgown and holding a candle floats up to you. Candid Mistletoe, as the Ghost of Christmas Past -- how appropriate.
+
+“We have to do something,” he says. “We need to mount a defense against Flickering Flame.”
+
+*fake_choice
+	#“The elves trust me. If we work together, we can rally the Fae and take back the Unseen World.” (tests Elf Rank)
+
+	#“Candid, no one has the Elves' respect like you, now that Mrs. Claus is gone. You need to take charge, and I'll be right there at your side.” (tests Candid Mistletoe)
+
+	#I start singing an old Christmas carol, trying to kindle the Christmas spirit left in their hearts. (tests Christmas spirit)
+
+	#“After they hear what I have to tell them, no one will fear Flickering Flame again. I hope.” (tests Army of Flames progress)
+
+Successes are declined, with the amount of success corresponding to your army's size, which is correlated to the amount of damage the world sustains. It also is a contributing factor to your relative positions of authority when dealing with Flickering Flame and Glass Ghost later on (as prisoners of war, or as your captors, or as equals).
+
+*finish

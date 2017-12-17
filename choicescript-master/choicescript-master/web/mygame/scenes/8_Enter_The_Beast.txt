@@ -1,0 +1,24 @@
+As you walk down the hallway with Mrs. Claus, the doors close behind you with a solid thunk. 
+You can't suppress a shiver. Mrs. Claus squeezes your hand. “Be firm. It will be all right.”
+
+You are shown into a penthouse office, with wrap-around windows letting in the twilight. Mr. Liontari stands behind a broad desk.
+
+“Please, be seated,” he says, indicating a pair of armchairs near an endtable with two cups of tea.
+
+Mrs. Claus sits down. She pulls off her gloves and folds them before grabbing a cup.
+
+*fake_choice
+	#I sit down, imitating Mrs. Claus. (+Claus relationship; +Hercules relationship)
+		*set Claus +1
+		*set Hercules +1
+	#I sit down, but keep my weight on my toes, ready to run. (+Hercules relationship; Mrs. Claus notices; -Claus relationship)
+		*set Claus -1
+		*set Hercules +1
+	#I remain standing, to defend Mrs. Claus. (+Claus relationship; -Hercules relationship)
+		*set Claus +1
+		*set Hercules -1
+	#I remain standing, refusing to participate in this farce. (-Claus relationship; -Hercules relationship)
+		*set Claus -1
+		*set Hercules -1
+		
+*finish
